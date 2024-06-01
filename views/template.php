@@ -23,7 +23,7 @@
 								<input type="text" name="s" value="<?php echo (!empty($viewData['searchTerm']))?$viewData['searchTerm']:''; ?>" required placeholder="<?php $this->lang->get('SEARCHFORANITEM'); ?>" />
 								<select name="category">
 
-									<option value=""><?php $this->lang->get('ALLCATEGORIES'); ?></option>
+									<option value=""><?php $this->lang->get('ALLCOLLECTIONS'); ?></option>
 
 									<?php foreach($viewData['categories'] as $cat): ?>
 									<option <?php echo ($viewData['category']==$cat['id'])?'selected="selected"':''; ?> value="<?php echo $cat['id']; ?>"><?php echo $cat['name']; ?></option>
@@ -60,7 +60,7 @@
 							<li><a href="<?php echo BASE_URL; ?>lang/set/pt-br">Português</a></li>
 						</ul>
 					</li>
-					<li><a href="<?php echo BASE_URL; ?>login"><?php $this->lang->get('LOGIN'); ?></a></li>
+				<!--	<li><a href="<?php echo BASE_URL; ?>login"><?php $this->lang->get('LOGIN'); ?></a></li>-->
 				</ul>
 			</div>
 		</nav>
@@ -83,10 +83,10 @@
 					 
 						 
 						
-							<div class="col-sm-2 categoryarea" onclick="document.querySelector('.hidden_search').style.display='none'">
+							<div class="col-sm-2 categoryarea">
 								<ul class="nav navbar-nav">
 									<li class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php $this->lang->get('CATEGORIES'); ?>
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php $this->lang->get('COLLECTION'); ?>
 										<span class="caret"></span></a>
 										<ul class="dropdown-menu">
 											<?php foreach($viewData['categories'] as $cat): ?>
@@ -135,7 +135,7 @@
 					</div>
 					 
 					
-					<div class="col">
+				<!--	<div class="col">
 						<a href="<?php echo BASE_URL; ?>cart">
 							<div class="cartarea">
 								<div class="carticon">
@@ -147,7 +147,7 @@
 								</div>
 							</div>
 						</a>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</header>
@@ -233,9 +233,7 @@
 										<li><a href="#">Categoria X</a></li>
 										<li><a href="#">Categoria X</a></li>
 										<li><a href="#">Categoria X</a></li>
-										<li><a href="#">Categoria X</a></li>
-										<li><a href="#">Categoria X</a></li>
-										<li><a href="#">Categoria X</a></li>
+										 
 									</ul>
 								</div>
 								<div class="col-sm-4">
@@ -244,9 +242,7 @@
 										<li><a href="#">Menu 1</a></li>
 										<li><a href="#">Menu 2</a></li>
 										<li><a href="#">Menu 3</a></li>
-										<li><a href="#">Menu 4</a></li>
-										<li><a href="#">Menu 5</a></li>
-										<li><a href="#">Menu 6</a></li>
+										 
 									</ul>
 								</div>
 								<div class="col-sm-4">
@@ -255,9 +251,7 @@
 										<li><a href="#">Menu 1</a></li>
 										<li><a href="#">Menu 2</a></li>
 										<li><a href="#">Menu 3</a></li>
-										<li><a href="#">Menu 4</a></li>
-										<li><a href="#">Menu 5</a></li>
-										<li><a href="#">Menu 6</a></li>
+										 
 									</ul>
 								</div>
 							</div>
@@ -268,13 +262,13 @@
 	    	<div class="copyright">
 	    		<div class="container">
 	    			<div class="row">
-						<div class="col-sm-6">© <span>AMMAR Moda Feminina</span> - <?php $this->lang->get('ALLRIGHTRESERVED'); ?>por FDcommerce</div>
+						<div class="col-sm-6">© <span>AMMAR Moda Feminina</span> - <?php $this->lang->get('ALLRIGHTRESERVED'); ?> por FDcommerce</div>
 						<div class="col-sm-6">
 							<div class="payments">
-								<img src="<?php echo BASE_URL; ?>assets/images/visa.png" />
-								<img src="<?php echo BASE_URL; ?>assets/images/visa.png" />
-								<img src="<?php echo BASE_URL; ?>assets/images/visa.png" />
-								<img src="<?php echo BASE_URL; ?>assets/images/visa.png" />
+							    <img src="<?php echo BASE_URL; ?>assets/images/visa.png" />
+								<img src="<?php echo BASE_URL; ?>assets/images/OIP.jpg" />
+								<img src="<?php echo BASE_URL; ?>assets/images/OIP2.jpg" />
+								 
 							</div>
 						</div>
 					</div>

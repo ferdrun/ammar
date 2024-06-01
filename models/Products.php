@@ -183,7 +183,7 @@ class Products extends model {
 		return $array;
 	}
 
-	public function getList($offset = 0, $limit = 5, $filters = array(), $random = false) {
+	public function getList($offset = 0, $limit = 6, $filters = array(), $random = false) {
 		$array = array();
 
 		$orderBySQL = '';

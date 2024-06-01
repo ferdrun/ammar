@@ -8,7 +8,7 @@
 			<input type="hidden" name="category" value="<?php echo $viewData['category']; ?>" />
 			
 			<div class="filterbox">
-				<div class="filtertitle"><?php $this->lang->get('BRANDS'); ?></div>
+				<div class="filtertitle"><?php $this->lang->get('CATEGORIES'); ?></div>
 				<div class="filtercontent">
 					<?php foreach($viewData['filters']['brands'] as $bitem): ?>
 					<div class="filteritem">
@@ -118,10 +118,5 @@
 
 	</div>
 
-	<div class="widget">
-		<h1><?php $this->lang->get('FEATUREDPRODUCTS'); ?></h1>
-		<div class="widget_body">
-			<?php $this->loadView('widget_item', array('list'=>$viewData['widget_featured1'])); ?>
-		</div>
-	</div>
+	 
 </aside>
