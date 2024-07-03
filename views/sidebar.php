@@ -118,5 +118,11 @@
 
 	</div>
 
+	<div class="widget">
+		<h1><?php $this->lang->get('FEATUREDPRODUCTS'); ?></h1>
+		<div class="widget_body">
+			<?php $this->loadView('widget_item', array('list'=>$viewData['widget_featured1'])); ?>
+		</div>
+	</div>
 	 
 </aside>

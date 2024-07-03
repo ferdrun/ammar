@@ -9,6 +9,11 @@ body {
 	min-height:40px;
 	margin-bottom:0px;
 }
+.language{
+	left: 10px;
+ 
+	color: #000;
+}
 .topnav .navbar-nav>li>a {
 	padding-top:10px;
     padding-bottom:10px;
@@ -81,7 +86,7 @@ header {
 	padding-top:50px;
     padding-bottom:10px;
 	line-height:20px;
-	padding-left:45px;
+	padding-left:0px;
 	padding-right:50px;
 	background-size:40px 40px;
 	background-repeat:no-repeat;
@@ -244,12 +249,12 @@ header {
 	}
 }
 .xfechar {
-	 font-size: 30px;
-	 left: 500px;
+	font-size: 30px;
+    left: 500px;
 	color: #000;
 	top: 20px;
 	height: 120px;
-	 position: relative;
+	position: relative;
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0,);
 	cursor: pointer;
 }

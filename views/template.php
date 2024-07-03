@@ -51,9 +51,11 @@
 					<li class="head_help">(11) 9999-9999</li>
 					<li class="head_email">contato@<span>loja2.com.br</span></li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
+								</div>
+								
+				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php $this->lang->get('LANGUAGE'); ?>
+						<a class="dropdown-toggle language" data-toggle="dropdown" href="#"><?php $this->lang->get('LANGUAGE'); ?>
 						<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="<?php echo BASE_URL; ?>lang/set/en">English</a></li>
@@ -63,6 +65,7 @@
 				<!--	<li><a href="<?php echo BASE_URL; ?>login"><?php $this->lang->get('LOGIN'); ?></a></li>-->
 				</ul>
 			</div>
+			 
 		</nav>
 		
 		<header>
@@ -135,7 +138,7 @@
 					</div>
 					 
 					
-				<!--	<div class="col">
+					<div class="col">
 						<a href="<?php echo BASE_URL; ?>cart">
 							<div class="cartarea">
 								<div class="carticon">
@@ -147,7 +150,7 @@
 								</div>
 							</div>
 						</a>
-					</div>-->
+					</div>
 				</div>
 			</div>
 		</header>
