@@ -52,15 +52,30 @@ class cartController extends controller {
         if(!empty($_POST['id_product'])) {
             $id = intval($_POST['id_product']);
             $qt = intval($_POST['qt_product']);
-
+            $sz = ($_POST['choise_size']);
+           
+          
+           
+            
             if(!isset($_SESSION['cart'])) {
                 $_SESSION['cart'] = array();
+               
             }
 
-            if(isset($_SESSION['cart'][$id])) {
+            if(isset($_SESSION['cart']['sz'])) {
+                $_SESSION[['cart']][$sz] = $sz;
+            }
+
+             if(isset($_SESSION['cart'][$id])) {
+                 
                 $_SESSION['cart'][$id] += $qt;
-            } else {
+                
+                
+            }else{
                 $_SESSION['cart'][$id] = $qt;
+                
+                
+                
             }
         }
 
@@ -75,6 +90,10 @@ class cartController extends controller {
             $payment_type = $_POST['payment_type'];
 
             switch($payment_type) {
+                case 'pix':
+                    header("Location: ".BASE_URL."pix");
+                    exit;
+                    break;
                 case 'checkout_transparente':
                     header("Location: ".BASE_URL."psckttransparente");
                     exit;

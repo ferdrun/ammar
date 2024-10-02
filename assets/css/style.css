@@ -450,6 +450,23 @@ footer h3 {
 	text-decoration: none;
 	display:block;
 }
+.product_size a{
+	border: 1px solid #000;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px;
+	
+}
+.product_size a:focus{
+	border: 1px solid #000;
+	background-color: #e36e93;
+	font-size: 20px;
+	padding: 10px;
+	
+}
+
+ 
+ 
 .product_tags {
 	position:absolute;
 }

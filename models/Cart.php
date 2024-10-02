@@ -8,18 +8,23 @@ class Cart extends model {
 
 		$array = array();
 		$cart = array();
-
+		 
 		if(isset($_SESSION['cart'])) {
 			$cart = $_SESSION['cart'];
+			
+		
+			 
 		}
 
 		foreach($cart as $id => $qt) {
-
+			  
 			$info = $products->getInfo($id);
-
+			
+			 
 			$array[] = array(
 				'id' => $id,
 				'qt' => $qt,
+				'sz' => $info['letter'],
 				'price' => $info['price'],
 				'name' => $info['name'],
 				'image' => $info['image'],
@@ -31,7 +36,7 @@ class Cart extends model {
 			);
 
 		}
-
+	 
 		return $array;
 	}
 
@@ -127,7 +132,12 @@ class Cart extends model {
 			$resposta["data"];
 			
 		}
-		print_r($resposta);
+		 
+			$array['price'] = ($resposta['data'][0]['value']);
+			$array['date'] = ($resposta['data'][0]['timeDays']);
+		
+		 
+			 return $array;
 	}
 }
 	

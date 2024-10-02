@@ -14,6 +14,8 @@ class Products extends model {
 			$array = $sql->fetch();
 			$images = current($this->getImagesByProductId($id));
 			$array['image'] = $images['url'];
+			$sz = current($this->getSizeById($id));
+			$array['letter'] = $sz['letter'];
 
 		}
 
@@ -200,7 +202,7 @@ class Products extends model {
 		$sql = "SELECT
 			*,
 			( select brands.name from brands where brands.id = products.id_brand ) as brand_name,
-			( select categories.name from categories where categories.id = products.id_category ) as category_name
+			( select collections.name from collections where collections.id = products.id_category ) as category_name
 		FROM
 		products
 		WHERE ".implode(' AND ', $where)."
@@ -249,6 +251,24 @@ class Products extends model {
 		$array = array();
 
 		$sql = "SELECT url FROM products_images WHERE id_product = :id";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(":id", $id);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$array = $sql->fetchAll();
+		}
+
+		return $array;
+	}
+
+	public function getSizeById($id) {
+		$array = array();
+		
+		$sql = "SELECT
+					products_size.id_product, products_size.letter, products.id
+					FROM products_size INNER JOIN products ON products_size.id_product = products.id
+					WHERE products.id = :id";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(":id", $id);
 		$sql->execute();
@@ -379,6 +399,7 @@ class Products extends model {
 			}
 
 			// Etapa 3 - Juntar tudo em um único array.
+			if(isset($options['id'])){
 			foreach($options as $ok => $op) {
 				if(isset($options_values[$op['id']])) {
 					$options[$ok]['value'] = $options_values[$op['id']];
@@ -386,6 +407,7 @@ class Products extends model {
 					$options[$ok]['value'] = '';
 				}
 			}
+		}
 
 		}
 

@@ -52,7 +52,7 @@
                 "issues": "https://github.com/duug-com-br/melhorenvio-sdk-php/issues",
                 "source": "https://github.com/duug-com-br/melhorenvio-sdk-php/tree/v1.2.1"
             },
-            "install-path": "../duug-com-br/melhorenvio-sdk-php"
+            "install-path": "../../../ammar/vendor/duug-com-br/melhorenvio-sdk-php"
         },
         {
             "name": "gerencianet/gerencianet-sdk-php",
@@ -117,7 +117,7 @@
                 "issues": "https://github.com/gerencianet/gn-api-sdk-php/issues",
                 "source": "https://github.com/gerencianet/gn-api-sdk-php/tree/master"
             },
-            "install-path": "../gerencianet/gerencianet-sdk-php"
+            "install-path": "../../../ammar/vendor/gerencianet/gerencianet-sdk-php"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -235,7 +235,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../guzzlehttp/guzzle"
+            "install-path": "../../../ammar/vendor/guzzlehttp/guzzle"
         },
         {
             "name": "guzzlehttp/promises",
@@ -317,7 +317,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../guzzlehttp/promises"
+            "install-path": "../../../ammar/vendor/guzzlehttp/promises"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -425,7 +425,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../guzzlehttp/psr7"
+            "install-path": "../../../ammar/vendor/guzzlehttp/psr7"
         },
         {
             "name": "mercadopago/sdk",
@@ -470,7 +470,78 @@
                 "source": "https://github.com/mercadopago/DEPRECATED-sdk-php/tree/v0.5.2"
             },
             "abandoned": true,
-            "install-path": "../mercadopago/sdk"
+            "install-path": "../../../ammar/vendor/mercadopago/sdk"
+        },
+        {
+            "name": "mpdf/qrcode",
+            "version": "v1.2.1",
+            "version_normalized": "1.2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpdf/qrcode.git",
+                "reference": "5320c512776aa3c199bd8be8f707ec83d9779d85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpdf/qrcode/zipball/5320c512776aa3c199bd8be8f707ec83d9779d85",
+                "reference": "5320c512776aa3c199bd8be8f707ec83d9779d85",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "^1.4|^2.0|^9.99.99",
+                "php": "^5.6 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "squizlabs/php_codesniffer": "^3.4",
+                "tracy/tracy": "^2.5",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "ext-gd": "To output QR codes to PNG files",
+                "ext-simplexml": "To output QR codes to SVG files"
+            },
+            "time": "2024-06-04T13:40:39+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Mpdf\\QrCode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Matěj Humpál",
+                    "role": "maintainer"
+                },
+                {
+                    "name": "Laurent Minguet",
+                    "role": "author"
+                }
+            ],
+            "description": "QR code generator for mPDF",
+            "keywords": [
+                "mpdf",
+                "pdf",
+                "php",
+                "qr",
+                "qrcode"
+            ],
+            "support": {
+                "issues": "https://github.com/mpdf/qrcode/issues",
+                "source": "https://github.com/mpdf/qrcode/tree/v1.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/mpdf",
+                    "type": "custom"
+                }
+            ],
+            "install-path": "../../../ammar/vendor/mpdf/qrcode"
         },
         {
             "name": "pagseguro/pagseguro-php-sdk",
@@ -518,7 +589,60 @@
                 "issues": "https://github.com/pagseguro/pagseguro-php-sdk/issues",
                 "source": "https://github.com/pagseguro/pagseguro-php-sdk/tree/3.4.1"
             },
-            "install-path": "../pagseguro/pagseguro-php-sdk"
+            "install-path": "../../../ammar/vendor/pagseguro/pagseguro-php-sdk"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v9.99.100",
+            "version_normalized": "9.99.100.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "time": "2020-10-15T08:29:30+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
+            ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/random_compat/issues",
+                "source": "https://github.com/paragonie/random_compat"
+            },
+            "install-path": "../../../ammar/vendor/paragonie/random_compat"
         },
         {
             "name": "paypal/rest-api-sdk-php",
@@ -575,7 +699,7 @@
                 "source": "https://github.com/paypal/PayPal-PHP-SDK/tree/master"
             },
             "abandoned": true,
-            "install-path": "../paypal/rest-api-sdk-php"
+            "install-path": "../../../ammar/vendor/paypal/rest-api-sdk-php"
         },
         {
             "name": "psr/http-message",
@@ -631,7 +755,7 @@
             "support": {
                 "source": "https://github.com/php-fig/http-message/tree/1.1"
             },
-            "install-path": "../psr/http-message"
+            "install-path": "../../../ammar/vendor/psr/http-message"
         },
         {
             "name": "psr/log",
@@ -684,7 +808,7 @@
             "support": {
                 "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
-            "install-path": "../psr/log"
+            "install-path": "../../../ammar/vendor/psr/log"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -731,7 +855,7 @@
                 "issues": "https://github.com/ralouphie/getallheaders/issues",
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
-            "install-path": "../ralouphie/getallheaders"
+            "install-path": "../../../ammar/vendor/ralouphie/getallheaders"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -818,7 +942,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-intl-idn"
+            "install-path": "../../../ammar/vendor/symfony/polyfill-intl-idn"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -902,7 +1026,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-intl-normalizer"
+            "install-path": "../../../ammar/vendor/symfony/polyfill-intl-normalizer"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -978,7 +1102,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-php72"
+            "install-path": "../../../ammar/vendor/symfony/polyfill-php72"
         }
     ],
     "dev": true,

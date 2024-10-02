@@ -20,7 +20,7 @@ if(ENVIRONMENT == 'development') {
 }
 
 $config['default_lang'] = 'pt-br';
-$config['cep_origin'] = '58400260';
+$config['cep_origin'] = '30642160';
 
 $config['pagseguro_seller'] = 'seu@email.com';
 

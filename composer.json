@@ -4,6 +4,7 @@
         "mercadopago/sdk": "0.5.2",
         "paypal/rest-api-sdk-php": "*",
         "gerencianet/gerencianet-sdk-php": "^2.0",
-        "duug-com-br/melhorenvio-sdk-php": "*"
+        "duug-com-br/melhorenvio-sdk-php": "*",
+        "mpdf/qrcode": "^1.2"
     }
 }

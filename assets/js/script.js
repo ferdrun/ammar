@@ -48,12 +48,16 @@ $(function(){
 		$('.mainphoto').find('img').attr('src', url);
 	});
 
-	 
+	 $('.product_size a').on('click', function(){
+		var size = $(this).text();
+		$('input[name=choise_size]').val(size);
+		 
+		 
+	 })
 
 
 });
  
-
 
 
 

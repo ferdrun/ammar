@@ -4,7 +4,7 @@ class Categories extends model {
 	public function getList() {
 		$array = array();
 
-		$sql = "SELECT * FROM categories ORDER BY sub DESC";
+		$sql = "SELECT * FROM collections ORDER BY sub DESC";
 		$sql = $this->db->query($sql);
 
 		if($sql->rowCount() > 0) {
@@ -29,7 +29,7 @@ class Categories extends model {
 
 		while($haveChild) {
 
-			$sql = "SELECT * FROM categories WHERE id = :id";
+			$sql = "SELECT * FROM collection WHERE id = :id";
 			$sql = $this->db->prepare($sql);
 			$sql->bindValue(":id", $id);
 			$sql->execute();
@@ -52,7 +52,7 @@ class Categories extends model {
 	}
 
 	public function getCategoryName($id) {
-		$sql = "SELECT name FROM categories WHERE id = :id";
+		$sql = "SELECT name FROM collection WHERE id = :id";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(":id", $id);
 		$sql->execute();

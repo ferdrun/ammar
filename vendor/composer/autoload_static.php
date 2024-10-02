@@ -31,6 +31,7 @@ class ComposerStaticInit346c0ebc8eaa2d5ec1a198780bac42cd
         ),
         'M' => 
         array (
+            'Mpdf\\QrCode\\' => 12,
             'MelhorEnvio\\' => 12,
         ),
         'G' => 
@@ -65,6 +66,10 @@ class ComposerStaticInit346c0ebc8eaa2d5ec1a198780bac42cd
         'PagSeguro\\' => 
         array (
             0 => __DIR__ . '/..' . '/pagseguro/pagseguro-php-sdk/source',
+        ),
+        'Mpdf\\QrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/qrcode/src',
         ),
         'MelhorEnvio\\' => 
         array (
